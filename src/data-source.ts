@@ -1,6 +1,5 @@
 import "reflect-metadata"
 import { DataSource } from "typeorm"
-import { User } from "./entities/User"
 import path from "path";
 
 const isCompiled = path.extname(__filename).includes('js');

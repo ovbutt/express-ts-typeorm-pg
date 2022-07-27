@@ -11,7 +11,11 @@ export class UserRoutes {
 	}
 
 	routes(){
-		this.router.get('/login', this.userController.login )
+		this.router.post('/login', this.userController.login )
+		this.router.post('/signup', this.userController.signup )
+		this.router.get('/profile', this.userController.profile )
+		this.router.put('/forgotPassword', this.userController.forgotPassword )
+
 	}
 
 }
