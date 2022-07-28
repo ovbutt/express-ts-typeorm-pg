@@ -11,11 +11,11 @@ export class TodoRoutes {
 	}
 
 	routes(){
-		this.router.get('/todo', this.todoController.all )
-		this.router.post('/todo', this.todoController.new )
-		this.router.put('/todo/:id', this.todoController.edit )
-		this.router.delete('/todo/:id', this.todoController.delete )
-		this.router.get('/todo/:id', this.todoController.getOne )
+		this.router.get('/all', this.todoController.all )
+		this.router.post('/new', this.todoController.new )
+		this.router.put('/:id', this.todoController.edit )
+		this.router.delete('/:id', this.todoController.delete )
+		this.router.get('/:id', this.todoController.getOne )
 	}
 
 }
