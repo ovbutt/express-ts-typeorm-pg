@@ -1,9 +1,6 @@
 export type JwtPayload = {
-  id: number;
-  name: string;
-  email: string;
-  role: string;
-  created_at: Date;
+  username: string;
+  password: string;
 };
 
 export type ErrorResponse = {
