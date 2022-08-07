@@ -25,7 +25,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.get('/', (req: Request, res: Response) => {
   res.send('Express, TypeScript, TypeORM, PostgreSQL Server');
 });
-// console.log(crypto.randomBytes(16).toString('hex'));
 
 app.use('/api', new ApiRouter().router);
 
@@ -33,11 +32,6 @@ AppDataSource.initialize()
   .then(async () => {
     app.listen(port, async () => {
       console.log(`⚡️[server]: Server is running at https://localhost:${port}`);
-      // console.log('password', encryptPassword('123456'));
-      // console.log(
-      //   'password',
-      //   comparePassword('123456', '$2a$10$ZN6c6PtDwCDBkQzPYh7KdOpyLSdqFn28ceRpnwCm/0zG2muJ.psaS'),
-      // );
     });
   })
   .catch((error) => console.log(error));
